@@ -33,3 +33,12 @@ java -jar selenium-server-4.11.0.jar router --sessions http://localhost:5556 --d
 ```bash
 java -jar selenium-server-4.11.0.jar node --detect-drivers true
 ```
+In case of warnings during node adding (see below) add `selenium-manager true` to add node command
+```bash
+10:25:52.790 WARN [SeleniumManager.lambda$runCommand$1] - Unable to discover proper msedgedriver version in offline mode
+10:25:52.958 WARN [SeleniumManager.lambda$runCommand$1] - Unable to discover proper geckodriver version in offline mode
+10:25:53.064 WARN [SeleniumManager.lambda$runCommand$1] - Unable to discover proper IEDriverServer version in offline mode
+```
+```bash
+java -jar selenium-server-4.11.0.jar node --selenium-manager true --detect-drivers true
+```

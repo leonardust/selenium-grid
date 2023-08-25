@@ -1,0 +1,9 @@
+[main] INFO org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\lukko\repos\selenium-grid\src\test\resources\TestSuites\LoginTestsGrid.xml
+
+[main] 09:36:43,148 INFO  [LoginTestsSuite] Create SauceLabs instance for : {browser} on {platform}
+[main] 09:52:31,437 INFO  [LoginTestsSuite] Create SauceLabs instance for : {browser} on {platform}
+[main] 09:52:31,438 INFO  [LoginTestsSuite] Connecting to the node with: chrome
+[main] 09:52:31,438 INFO  [LoginTestsSuite] Setting platform to WIN11...
+sie 24, 2023 9:52:31 AM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+INFO: Using OpenTelemetry for tracing

@@ -6,14 +6,14 @@ import org.openqa.selenium.WebDriver;
 
 public class LoggedInSuccessfullyPage extends BasePageObject {
 
-	private By logOutButton = By.xpath("//a[text()='Log out']");
+    private By logOutButton = By.xpath("//a[text()='Log out']");
 
-	public LoggedInSuccessfullyPage(WebDriver driver, Logger log) {
-		super(driver, log);
-	}
+    public LoggedInSuccessfullyPage(WebDriver driver, Logger log) {
+        super(driver, log);
+    }
 
 
-	public boolean isLogOutButtonVisible() {
-		return find(logOutButton).isDisplayed();
-	}
+    public boolean isLogOutButtonVisible() {
+        return find(logOutButton).isDisplayed();
+    }
 }
