@@ -42,3 +42,15 @@ In case of warnings during node adding (see below) add `selenium-manager true` t
 ```bash
 java -jar selenium-server-4.11.0.jar node --selenium-manager true --detect-drivers true
 ```
+
+## TestNg maven configuration
+
+- add testng plugin to jenkins
+- Create local variable allow to use test name as commandline parameter. Add `<suiteXmlFile>` property in `Pom.xml` with the name of testng suite to use by maven surfire plugin
+```xml
+<properties>
+    <suiteXmlFile>LoginTestsSauceLabs.xml</suiteXmlFile>
+</properties>
+```
+- in Jenkins `Goals and options` you cen add maven command `clean test -DsuiteXmlFile=LoginTestsSauceLabs.xml`
+- modify report pattern `Post-build Actions` to 

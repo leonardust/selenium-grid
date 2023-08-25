@@ -7,6 +7,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>Selenium Grid And Cloud</name>
 
+    <properties>
+        <!-- Custom defined property "suiteXmlFile" -->
+        <suiteXmlFile>LoginTestsSauceLabs.xml</suiteXmlFile>
+    </properties>
+
     <dependencies>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -14,7 +19,6 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.8.0</version>
-            <scope>test</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -58,14 +62,6 @@
             <version>2.0.7</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.8.0</version>
-            <scope>compile</scope>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.saucelabs/sauce_testng -->
         <dependency>
             <groupId>com.saucelabs</groupId>
@@ -103,7 +99,7 @@
                 <version>3.1.2</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/TestSuites/AllTests.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/TestSuites/${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
